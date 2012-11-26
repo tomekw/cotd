@@ -1,10 +1,12 @@
 # cotd
 
-Clojure of the day
+Clojure of the day: it displays random documentation for function from
+`clojure.core` namespace.
 
 ## Installation
 
-Download from https://github.com/tomekw/cotd
+Download https://github.com/downloads/tomekw/cotd/cotd-0.1.0, make it
+executable and place somewhere in your `PATH`.
 
 ## Usage
 
