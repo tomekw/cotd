@@ -1,4 +1,4 @@
-(ns cotd.core
+(ns com.tomekw.cotd.core
   (:gen-class)
   (:use [clojure.repl :only (doc)]))
 
