@@ -1,20 +1,11 @@
 (ns com.tomekw.cotd.core
-  (:gen-class)
-  (:use [clojure.repl :only (doc)]))
+  (:gen-class))
 
-(defn- lookup-doc-for [function-name]
-  (eval `(doc ~function-name)))
+(defn -main [& args]
+  (let [public-functions (vals (ns-publics 'clojure.core))
+        random-doc (meta (rand-nth public-functions))]
+    (do (println "-------------------------")
+        (println (str "clojure.core/" (:name random-doc)))
+        (println (:arglists random-doc))
+        (println (str "  " (:doc random-doc))))))
 
-(def for-namespace
-  (symbol "clojure.core"))
-
-(def functions-list
-  (keys (ns-publics for-namespace)))
-
-(def random-function-name
-  (rand-nth functions-list))
-
-(defn -main
-  "Clojure of the day"
-  [& args]
-  (lookup-doc-for random-function-name))

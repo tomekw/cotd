@@ -1,11 +1,2 @@
-{:paths   ["src/main/clojure" "classes"]
- :deps    {org.clojure/clojure {:mvn/version "1.9.0"}}
- :aliases {:native-image {:extra-deps {luchiniatwork/cambada {:mvn/version "1.0.0"}}
-                          :main-opts  ["-m" "cambada.native-image"
-                                       "-m" "com.tomekw.cotd.core"
-                                       "-O" "H:+ReportExceptionStackTraces"
-                                       "-O" "-no-fallback"
-                                       ;;"-O" "J-Dclojure.compiler.direct-linking=true"
-                                       "-O" "-initialize-at-build-time=com.tomekw.cotd.core$_main"
-                                       "-O" "-initialize-at-build-time=clojure"]}}}
-                                       ;;"-O" "J-Dclojure.spec.skip-macros=true"]}}}
+{:paths ["src/main/clojure" "classes"]
+ :deps {org.clojure/clojure {:mvn/version "1.9.0"}}}
