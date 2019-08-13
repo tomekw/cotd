@@ -8,4 +8,3 @@
         (println (str "clojure.core/" (:name random-doc)))
         (println (:arglists random-doc))
         (println (str "  " (:doc random-doc))))))
-

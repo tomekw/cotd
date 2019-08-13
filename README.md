@@ -2,7 +2,7 @@
 
 Clojure of the day: it displays random documentation for function from `clojure.core` namespace.
 
-# Usage
+## Usage
 
 Download the binary from the releases page: https://github.com/tomekw/cotd/releases.
 
@@ -27,3 +27,6 @@ clojure.core/read
 
   For data structure interop use clojure.edn/read
 ```
+
+## Building
+Tweak `GRAALVM_HOME` and `JAVA_HOME` in `script/build.sh` and run it.
